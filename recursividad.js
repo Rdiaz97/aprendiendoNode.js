@@ -3,7 +3,7 @@ function recursiva_1(n) {
         return n
     }else {
         console.log(n)
-        return recursiva_1(n-1)+n;
+        return n + recursiva_1(n-1);
     }
 }
 
