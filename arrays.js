@@ -53,7 +53,7 @@ function acabaena(words) {
   return true; // <-- Si recorrió todos es que está todo bien, !!fuera del for
 }
 
-console.log(acabaena[texto]);
+// console.log(acabaena[texto]);
 
 let numeros=[5, -10, -2, -25, -7];
 
@@ -69,6 +69,53 @@ function ordenAbs (array){
 return total
 }
 
-console.log(ordenAbs(numeros))
+// console.log(ordenAbs(numeros))
 
 
+function sortAbsoluteNumbers(numbers) {
+  return [...numbers].sort((a, b) => {
+    if(Math.abs(a) < Math.abs(b)) return -1
+    if(Math.abs(a) > Math.abs(b)) return 1
+  })  }
+
+  // console.log(sortAbsoluteNumbers(numeros));
+
+
+  const palabras=["juego","amigo","complicado"];
+  const palabra="juego";
+
+function buscaPalabras(words, word) {
+  let indice = words.indexOf(word);
+  let resultado = words.filter(palabra => palabra.length > indice);
+  return resultado;
+}
+
+// console.log(buscaPalabras(palabras,palabra));
+
+const matrix = [
+  ['HTML', 'CSS', 'JavaScript'],
+  ['Java', 'C++', 'Python'],
+  ['Ruby', 'Go', 'Swift']
+]
+
+
+
+function findJavaScript(matrix) {
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+      if (matrix[i][j] === 'JavaScript') {
+        return [i, j];
+      }
+    }
+  }
+  return [-1, -1]; // Devolver un valor que indique que no se encontró 'JavaScript' en la matriz
+}
+
+const position = findJavaScript(matrix)
+console.log(position) // -> [0, 2]
+
+function minAndMaxWord(libros) {
+  let minIndex = libros.indexOf(Math.min(...libros));
+  let maxIndex = libros.indexOf(Math.max(...libros));
+  return [minIndex, maxIndex];
+}
