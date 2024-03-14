@@ -1,39 +1,36 @@
-function createObject(name, subs) {
-    return {
-      name: name,
-      subscribers: subs,
-      hash: name.length * subs,
-      getStatus: function() {
-          return "El canal de "+this.name+" tiene "+this.subscribers;
-      }
+function createObject (name, subs) {
+  return {
+    name,
+    subscribers: subs,
+    hash: name.length * subs,
+    getStatus: function () {
+      return 'El canal de ' + this.name + ' tiene ' + this.subscribers
     }
   }
+}
 
-
-
-console.log(createObject("dani",100))
+console.log(createObject('dani', 100))
 
 const spiderman = {
-    name: 'Spidey',
-    universe: 42,
-    powers: ['web', 'invisibility', 'spider-sense']
-  }
-  
-  for (const property in spiderman) {
-    console.log(`${property}: ${spiderman[property]}`);
-  }
+  name: 'Spidey',
+  universe: 42,
+  powers: ['web', 'invisibility', 'spider-sense']
+}
+
+for (const property in spiderman) {
+  console.log(`${property}: ${spiderman[property]}`)
+}
 
 //   Iterar con Object.keys()
 // El método Object.keys() retorna un array con las propiedades enumerables de un objeto.
 
+const properties = Object.keys(spiderman)
 
-  const properties = Object.keys(spiderman)
-  
-  console.log(properties.length) // 3
-  
-  properties.forEach(property => {
-    console.log(property)
-  })
+console.log(properties.length) // 3
+
+properties.forEach(property => {
+  console.log(property)
+})
 
 //   Iterando con Object.values()
 // El método Object.values() retorna un array con los valores correspondientes a las propiedades enumerables de un objeto.
@@ -62,10 +59,8 @@ entrieses.forEach(entry => {
   console.log(`${property}: ${value}`)
 })
 
+function getKeysOfBooleanValues (obj) {
+  return Object.keys(obj).filter(key => typeof obj[key] === 'boolean')
+}
 
-function getKeysOfBooleanValues(obj) {
-    return Object.keys(obj).filter(key => typeof obj[key] === 'boolean');
-  }
-
-  console.log(getKeysOfBooleanValues({a: true, b: 42, c: false }))
-
+console.log(getKeysOfBooleanValues({ a: true, b: 42, c: false }))
