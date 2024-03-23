@@ -22,7 +22,7 @@ const processRequest = (req, res) => {
     })
   } else if (req.url === '/contacto') {
     console.log('request recibida: ', req.url)
-    res.end('Contacto')
+    res.end('Contactos')
   } else {
     res.statusCode = 404
     res.end('404 not found')
