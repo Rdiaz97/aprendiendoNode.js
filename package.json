@@ -1,29 +1,18 @@
 {
-  "name": "primer_proyecto",
+  "name": "aprendiendo-nodejs",
   "version": "1.0.0",
-  "description": "1er proyecto en node.js",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "github.com/Rdiaz97/aprendiendoNode.js"
-  },
-  "keywords": [
-    "node",
-    "nodejs",
-    "aprendiendo"
-  ],
-  "author": "midudev",
-  "license": "MIT",
-  "dependencies": {
-    "picocolors": "^1.0.0"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "standard": "^17.1.0"
   },
-  "eslintConfig":{
-    "extends": "standard"
+  "eslintConfig": {
+    "extends":"standard"
   }
 }
